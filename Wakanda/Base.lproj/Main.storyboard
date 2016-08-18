@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wakanda" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-ZX-7Rj">
+                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCc-I9-7Af">
+                                <rect key="frame" x="145" y="555" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JAk-hm-4cL"/>
+                                    <constraint firstAttribute="width" constant="120" id="gnW-Hc-A55"/>
+                                </constraints>
+                                <state key="normal" title="ADELANTE"/>
+                                <connections>
+                                    <action selector="nextTadep:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ybs-US-sPo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydc-R6-2WS">
+                                <rect key="frame" x="475" y="555" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="JZo-2V-9eE"/>
+                                    <constraint firstAttribute="height" constant="40" id="TyR-le-XCL"/>
+                                </constraints>
+                                <state key="normal" title="ACTUALIZAR"/>
+                                <connections>
+                                    <action selector="refreshTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gf3-Ze-yfm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-zU-lWe">
+                                <rect key="frame" x="5" y="555" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4lY-zd-gec"/>
+                                    <constraint firstAttribute="width" constant="120" id="wJf-lb-FUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="ATRAS"/>
+                                <connections>
+                                    <action selector="backTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RyO-ec-Lew"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nKf-ZX-7Rj" secondAttribute="trailing" id="0GE-AT-evN"/>
+                            <constraint firstItem="Vkx-zU-lWe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="3I8-sw-UVM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SCc-I9-7Af" secondAttribute="bottom" constant="5" id="Bew-LI-coN"/>
+                            <constraint firstItem="SCc-I9-7Af" firstAttribute="leading" secondItem="Vkx-zU-lWe" secondAttribute="trailing" constant="20" id="GMf-m0-ZVj"/>
+                            <constraint firstAttribute="trailing" secondItem="ydc-R6-2WS" secondAttribute="trailing" constant="5" id="J5R-S4-ulN"/>
+                            <constraint firstItem="Vkx-zU-lWe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="K1O-gR-Uxu"/>
+                            <constraint firstItem="nKf-ZX-7Rj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mRz-SD-rck"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vkx-zU-lWe" secondAttribute="bottom" constant="5" id="rcU-pc-pfh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nKf-ZX-7Rj" secondAttribute="bottom" constant="50" id="u7Y-uv-BYV"/>
+                            <constraint firstItem="nKf-ZX-7Rj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vHD-Uj-7kI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ydc-R6-2WS" secondAttribute="bottom" constant="5" id="vec-UX-5me"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="nKf-ZX-7Rj" id="Xdt-V8-UsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="399"/>
+        </scene>
+    </scenes>
+</document>
